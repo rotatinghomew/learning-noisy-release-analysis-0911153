@@ -1,0 +1,14 @@
+[
+  {
+    "path": "data/cases/boundary-1.json",
+    "meaning": "零噪声且交集、边际和固定总人数一致；可人工核对潜在人数组合。"
+  },
+  {
+    "path": "data/cases/boundary-2.json",
+    "meaning": "完全相同机制与取值的重复发布；复制资料不能当独立新增样本。"
+  },
+  {
+    "path": "data/cases/boundary-3.json",
+    "meaning": "零噪声下的互斥分类观测与固定总人数冲突，应保留冲突而非静默修改。"
+  }
+]

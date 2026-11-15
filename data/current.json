@@ -1,0 +1,258 @@
+{
+  "revision": "2026q4-v1",
+  "synthetic": true,
+  "cells": [
+    {
+      "cell_id": "before-music_only",
+      "period": "before",
+      "class": "music_only"
+    },
+    {
+      "cell_id": "before-digital_only",
+      "period": "before",
+      "class": "digital_only"
+    },
+    {
+      "cell_id": "before-both",
+      "period": "before",
+      "class": "both"
+    },
+    {
+      "cell_id": "before-neither",
+      "period": "before",
+      "class": "neither"
+    },
+    {
+      "cell_id": "after-music_only",
+      "period": "after",
+      "class": "music_only"
+    },
+    {
+      "cell_id": "after-digital_only",
+      "period": "after",
+      "class": "digital_only"
+    },
+    {
+      "cell_id": "after-both",
+      "period": "after",
+      "class": "both"
+    },
+    {
+      "cell_id": "after-neither",
+      "period": "after",
+      "class": "neither"
+    }
+  ],
+  "noise_variance": {
+    "shared": 25,
+    "old": 16,
+    "new": 16,
+    "before-music": 9,
+    "before-digital": 9,
+    "before-overlap": 9,
+    "before-neither": 9,
+    "after-music": 9,
+    "after-digital": 9,
+    "after-overlap": 9,
+    "after-neither": 9,
+    "r3-music": 4,
+    "r3-digital": 4,
+    "r3-overlap": 4,
+    "r3-neither": 4
+  },
+  "constraints": [
+    {
+      "kind": "fixed_total",
+      "period": "before",
+      "total": 120
+    },
+    {
+      "kind": "fixed_total",
+      "period": "after",
+      "total": 120
+    }
+  ],
+  "releases": [
+    {
+      "release_id": "r1",
+      "replaces": null,
+      "mechanism": "normal-linear-v1",
+      "measurements": [
+        {
+          "measurement": "r1-music",
+          "value": 51,
+          "coefficients": {
+            "before-music_only": 1,
+            "before-both": 1
+          },
+          "loading": {
+            "shared": 1,
+            "old": 1,
+            "before-music": 1
+          }
+        },
+        {
+          "measurement": "r1-digital",
+          "value": 72,
+          "coefficients": {
+            "before-digital_only": 1,
+            "before-both": 1
+          },
+          "loading": {
+            "shared": 1,
+            "old": 1,
+            "before-digital": 1
+          }
+        },
+        {
+          "measurement": "r1-overlap",
+          "value": 20,
+          "coefficients": {
+            "before-both": 1
+          },
+          "loading": {
+            "shared": 1,
+            "old": 1,
+            "before-overlap": 1
+          }
+        },
+        {
+          "measurement": "r1-neither",
+          "value": 21,
+          "coefficients": {
+            "before-neither": 1
+          },
+          "loading": {
+            "shared": 1,
+            "old": 1,
+            "before-neither": 1
+          }
+        }
+      ]
+    },
+    {
+      "release_id": "r2",
+      "replaces": null,
+      "mechanism": "normal-linear-v1",
+      "measurements": [
+        {
+          "measurement": "r2-music",
+          "value": -2,
+          "coefficients": {
+            "after-music_only": 1,
+            "after-both": 1
+          },
+          "loading": {
+            "shared": 1,
+            "new": 1,
+            "after-music": 1
+          }
+        },
+        {
+          "measurement": "r2-digital",
+          "value": 76,
+          "coefficients": {
+            "after-digital_only": 1,
+            "after-both": 1
+          },
+          "loading": {
+            "shared": 1,
+            "new": 1,
+            "after-digital": 1
+          }
+        },
+        {
+          "measurement": "r2-overlap",
+          "value": 3,
+          "coefficients": {
+            "after-both": 1
+          },
+          "loading": {
+            "shared": 1,
+            "new": 1,
+            "after-overlap": 1
+          }
+        },
+        {
+          "measurement": "r2-neither",
+          "value": 44,
+          "coefficients": {
+            "after-neither": 1
+          },
+          "loading": {
+            "shared": 1,
+            "new": 1,
+            "after-neither": 1
+          }
+        }
+      ]
+    },
+    {
+      "release_id": "r3",
+      "replaces": "r2",
+      "mechanism": "normal-linear-v1",
+      "measurements": [
+        {
+          "measurement": "r3-music",
+          "value": 3,
+          "coefficients": {
+            "after-music_only": 1,
+            "after-both": 1
+          },
+          "loading": {
+            "shared": 1,
+            "new": 1,
+            "after-music": 1,
+            "r3-music": 1
+          }
+        },
+        {
+          "measurement": "r3-digital",
+          "value": 73,
+          "coefficients": {
+            "after-digital_only": 1,
+            "after-both": 1
+          },
+          "loading": {
+            "shared": 1,
+            "new": 1,
+            "after-digital": 1,
+            "r3-digital": 1
+          }
+        },
+        {
+          "measurement": "r3-overlap",
+          "value": 3,
+          "coefficients": {
+            "after-both": 1
+          },
+          "loading": {
+            "shared": 1,
+            "new": 1,
+            "after-overlap": 1,
+            "r3-overlap": 1
+          }
+        },
+        {
+          "measurement": "r3-neither",
+          "value": 44,
+          "coefficients": {
+            "after-neither": 1
+          },
+          "loading": {
+            "shared": 1,
+            "new": 1,
+            "after-neither": 1,
+            "r3-neither": 1
+          }
+        }
+      ]
+    }
+  ],
+  "mechanisms": {
+    "normal-linear-v1": {
+      "distribution": "joint_normal",
+      "zero_mean": true
+    }
+  }
+}
