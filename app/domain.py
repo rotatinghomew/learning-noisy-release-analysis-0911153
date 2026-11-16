@@ -1,3 +1,4 @@
+from app.latent import latent_participation
 from app.releases import release_profile
 from app.protocol import finite, unique
 
@@ -27,4 +28,5 @@ def release_inventory(packet, options):
     return {"source_profile": release_profile(packet), "releases": releases, "interpretation": "Values are noisy releases, not latent participant counts."}
 
 
-ANALYSES = {"release_inventory": release_inventory}
+ANALYSES = {"release_inventory": release_inventory,
+            "latent_participation": latent_participation}

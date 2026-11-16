@@ -25,4 +25,14 @@ docker run --rm --network none noisy-release-analysis:initial python -m app.demo
 
 现有业务视图：`app/releases.py`，当前结果在 `source_profile` 中公开。
 
+## 参与规模与变化分析
+
+`latent_participation` 与 `release_inventory` 并存，把匿名汇总交换还原成各期互斥分类的潜在人数、各项目参与人数、参与人数与相邻期变化，并按完整噪声协方差给出 profile 区间。它不会把重复或更正发布当作独立样本平均，不会把未覆盖人群填成 0，也不会把互相矛盾的发布修成一张表。
+
+```sh
+python -m app.demo --analysis latent_participation
+```
+
+结果字段、情景选项与不确定性含义见 `docs/data-contract.md`；领域测试对应关系见 `docs/verification.md`。
+
 容器默认入口为真实 HTTP 分析服务（8322 端口），同时启动仅回环可见的资料目录；`GET /health` 可检查就绪。离线限时演示显式运行 `python -m app.demo`，不是让常驻服务自行退出。
